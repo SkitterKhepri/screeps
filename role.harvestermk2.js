@@ -30,7 +30,7 @@ var roleHarvesterMK2 = {
             //     } 
             // }
             // if(targets.length == 0){
-            //     creep.moveTo(Game.spawns['Home'], {visualizePathStyle: {stroke: '#ffffff'}})
+            //     creep.moveTo(Game.spawns['null'], {visualizePathStyle: {stroke: '#ffffff'}})
             // }
         }
 	}

@@ -19,7 +19,7 @@ var roleBuilder = {
 	    }
 	    else {
 	        //if(creep.store.getFreeCapacity() == 0){
-	        //    creep.moveTo(Game.spawns['Home'], {visualizePathStyle: {stroke: '#ffffff'}});
+	        //    creep.moveTo(Game.spawns['null'], {visualizePathStyle: {stroke: '#ffffff'}});
 	        //}
             //var droppedEnergy = creep.room.find(FIND_DROPPED_RESOURCES).filter((resource) => resource.resourceType == RESOURCE_ENERGY)
 	        //if(droppedEnergy.length > 0){

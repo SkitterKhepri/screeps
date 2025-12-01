@@ -41,7 +41,7 @@ var roleHarvester = {
                     }
                 }
                 else{
-                    creep.moveTo(Game.spawns['Home'], {visualizePathStyle: {stroke: '#ffffff'}})
+                    creep.moveTo(Game.spawns['null'], {visualizePathStyle: {stroke: '#ffffff'}})
                 }
             }
         }

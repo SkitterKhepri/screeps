@@ -23,7 +23,7 @@ var sourceFunctions = {
     },
     maxSourceKey : function(room, type){
         var sources = []
-        for(let i = 0; i < Game.spawns['Home'].room.find(FIND_SOURCES).length; i++){
+        for(let i = 0; i < Game.spawns['null'].room.find(FIND_SOURCES).length; i++){
             sources[i] = 0
         }
         for(var name in Game.creeps){
@@ -76,6 +76,7 @@ var creepFunctions = {
                 }
             }
         )
+        // console.log(nobleCreeps)
         // console.log('carrierless: ' + nobleCreeps)
         return nobleCreeps;
     },
@@ -95,4 +96,18 @@ var creepFunctions = {
         }
     }
 }
-module.exports = {sourceFunctions, creepFunctions};
+
+var otherFunc = {
+    getStoredEnergy : function(room){
+        var storedEnergy = 0
+        var containers = room.find(FIND_STRUCTURES, {
+                filter: (structure) => {return (structure.structureType == STRUCTURE_STORAGE || structure.structureType == STRUCTURE_CONTAINER)}
+            });
+        for(let i = 0; i < containers.length; i++){
+            storedEnergy += containers[i].store.getUsedCapacity(RESOURCE_ENERGY)
+        }
+        return storedEnergy;
+    }
+}
+
+module.exports = {sourceFunctions, creepFunctions, otherFunc};
